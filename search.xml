@@ -60,4 +60,14 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2023/11/02/Python-%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<hr>
+<h2 id="title-Python-面向过程编程笔记"><a href="#title-Python-面向过程编程笔记" class="headerlink" title="title:Python 面向过程编程笔记"></a>title:Python 面向过程编程笔记</h2><h1 id="PYTHON"><a href="#PYTHON" class="headerlink" title="PYTHON"></a>PYTHON</h1><h2 id="1-先说什么是面向过程和面向对象"><a href="#1-先说什么是面向过程和面向对象" class="headerlink" title="1.先说什么是面向过程和面向对象"></a>1.先说什么是面向过程和面向对象</h2><ol>
+<li>面向过程：面向过程编程是一种基于过程或函数的编程范式。在面向过程编程中，程序主要由一系列函数或过程组成，这些函数用于执行特定的任务。<strong>程序的控制流是线性的，从一个函数调用到另一个函数，依次执行。通常数据以全局变量或局部变量的形式存储，而函数则操作这些数据。</strong>针对过程编程强调程序的步骤和过程，而不关注数据的抽象和封装。</li>
+<li>面向对象：面向对象编程是一种<strong>以对象为中心</strong>的编程范式。在面向对象编程中，程序通过创建和操作对象来实现功能。<strong>对象是具有状态（属性）和行为（方法）的实体，它们可以面向对象编程数据增强的抽象和封装，以及通过类来定义对象的模板。类是对象的蓝图，定义了对象的属性和方法</strong>。面向对象编程有主要的四个结构：封装、继承、多状态和抽象。</li>
+</ol>
+]]></content>
+  </entry>
 </search>
