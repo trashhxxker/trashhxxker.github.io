@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>认识windows域</title>
+    <url>/2023/10/31/windows%E5%9F%9F%E7%9A%84%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<h1 id="windows域的概念"><a href="#windows域的概念" class="headerlink" title="windows域的概念"></a>windows域的概念</h1><h2 id="域的概念（concept）"><a href="#域的概念（concept）" class="headerlink" title="域的概念（concept）"></a>域的概念（concept）</h2><p>域是计算机网络的一种形式，其中所有用户账户，计算机，打印机和其他安全主体都位于域控制器里的一个或多个中央计算机集群上的中央数据库中注册。身份验证也位于域控制器上进行。</p>
+<p><em><strong>域（domain）相当于一个升级的工作组</strong></em></p>
+<p>域是一个拥有安全边界的计算机集合，一个域无法访问另一个域的资源。</p>
+<p><em><strong>域控制器（domain controller,dc） 相当于域中的一台管理服务器的计算机（部门老大）</strong></em></p>
+<p><em><strong>域控制器里面存在这个域中的账户密码，属于这个域的计算机登信息构成的数据库。</strong></em></p>
+<p>计算机如果要连接这个域，域控制器就要鉴别这台计算机是否属于这个域，以及用户使用的登录账号是否存在，密码是否正确，如果以上信息有一项不正确，域控制器就会拒绝这台计算机登录，也不能访问这个资源。</p>
+<p>域控制器是整个域的通信枢纽，所有权限身份验证都在域控制器上进行，所有域内所有验证身份的账户密码散列值都在域控制器里。</p>
+<h2 id="单域"><a href="#单域" class="headerlink" title="单域"></a>单域</h2><p>通常在一个地理位置固定的小公司里，一个域就可以满足需求，在一个域内，一般要至少两台域服务器，一台作为DC，另一台作为备份DC。一般情况下，dc又是域控也会当作域名服务器使用。</p>
+<p><img src="C:\Users\HUANGZHIXIAN\AppData\Roaming\Typora\typora-user-images\image-20231012173843455.png" alt="image-20231012173843455"></p>
+<h2 id="父域和子域"><a href="#父域和子域" class="headerlink" title="父域和子域"></a>父域和子域</h2><h2 id="域树"><a href="#域树" class="headerlink" title="域树"></a>域树</h2><p>多个父域子域组成的</p>
+<p>人多了，单域无法满足</p>
+<p>森林</p>
+<h1 id="搭建域环境"><a href="#搭建域环境" class="headerlink" title="搭建域环境"></a>搭建域环境</h1><p>条件：</p>
+<p>域控+域内主机+域内主机</p>
+<h2 id="活动目录（类似于DC的数据库）"><a href="#活动目录（类似于DC的数据库）" class="headerlink" title="活动目录（类似于DC的数据库）"></a>活动目录（类似于DC的数据库）</h2><p>ad就是提供目录服务的组件</p>
+<p>目录用于存储有关网络对象的信息，可以管理组</p>
+<h2 id="组织单元（OU）容器可部署策略，domain-controller"><a href="#组织单元（OU）容器可部署策略，domain-controller" class="headerlink" title="组织单元（OU）容器可部署策略，domain controller"></a>组织单元（OU）容器可部署策略，domain controller</h2><h2 id="委派控制"><a href="#委派控制" class="headerlink" title="委派控制"></a>委派控制</h2>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/10/31/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%84/</url>
+    <content><![CDATA[<p>title：</p>
+<h2 id="什么是组"><a href="#什么是组" class="headerlink" title="什么是组"></a>什么是组</h2><p>每个部门为了完成相应的工作而布置分配的小组，便于管理和分配电脑以及网络</p>
+<h2 id="加入工作组"><a href="#加入工作组" class="headerlink" title="加入工作组"></a>加入工作组</h2><p>更改已有的工作组名称</p>
+<h2 id="创建工作组"><a href="#创建工作组" class="headerlink" title="创建工作组"></a>创建工作组</h2><p><img src="C:\Users\HUANGZHIXIAN\AppData\Roaming\Typora\typora-user-images\image-20231012164703499.png" alt="image-20231012164703499"></p>
+<p>没有的新工作组更改会创建</p>
+<p>重启</p>
+<h2 id="退出工作组"><a href="#退出工作组" class="headerlink" title="退出工作组"></a>退出工作组</h2><p>改掉名称就行，工作组就如一个社团一样 </p>
+<h2 id="工作组优缺点"><a href="#工作组优缺点" class="headerlink" title="工作组优缺点"></a>工作组优缺点</h2><p>优点</p>
+<p>1.方便管理维护</p>
+<p>2.资源分配灵活方便</p>
+<p>缺点</p>
+<p>1.缺乏集中管理和控制机制</p>
+<p>2.没有集中的统一账户管理</p>
+<p>3.知识和小规模用户的使用  </p>
+<h2 id="如何访问？"><a href="#如何访问？" class="headerlink" title="如何访问？"></a>如何访问？</h2><p>图形化：进入网络，输入账号密码，内网</p>
+<p>高级共享设置可以设置网络，共享，密码保护</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/10/31/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
