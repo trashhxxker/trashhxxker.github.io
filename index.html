@@ -121,7 +121,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -174,6 +174,147 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/09/leetcode%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/09/leetcode%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-09 17:29:25" itemprop="dateCreated datePublished" datetime="2023-11-09T17:29:25+08:00">2023-11-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr>
+<h2 id="title：leetcode-简单题之两数之和-python解法"><a href="#title：leetcode-简单题之两数之和-python解法" class="headerlink" title="title：leetcode 简单题之两数之和 python解法"></a>title：leetcode 简单题之两数之和 python解法</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a><em><strong>题目</strong></em></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</span><br><span class="line"></span><br><span class="line">你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</span><br><span class="line"></span><br><span class="line">你可以按任意顺序返回答案。</span><br></pre></td></tr></table></figure>
+
+<h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a><em><strong>思路分析</strong></em></h3><p>这道题没有难度，主要考验的是对循环的使用，内嵌套一个双循环，定一个外层内层循环，再遍历内循环，去一一对比两数之和等于目标值的序号，结果返回序号就行。</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><em><strong>题解</strong></em></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>,n):</span><br><span class="line">                <span class="keyword">if</span> nums[i]+ nums[j] ==target:</span><br><span class="line">                    <span class="keyword">return</span> [i,j]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/09/python%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A3%85%E9%A5%B0%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/09/python%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A3%85%E9%A5%B0%E5%99%A8/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-09 11:02:28 / 修改时间：18:47:11" itemprop="dateCreated datePublished" datetime="2023-11-09T11:02:28+08:00">2023-11-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr>
+<h2 id="title-装饰器-迭代器-生成器"><a href="#title-装饰器-迭代器-生成器" class="headerlink" title="title:装饰器 + 迭代器+生成器"></a>title:装饰器 + 迭代器+生成器</h2><h1 id="装饰器的功能"><a href="#装饰器的功能" class="headerlink" title="装饰器的功能"></a>装饰器的功能</h1><p>可以添加模块以外的各种小功能</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#！/usr/bin/env python3 #指定解释器</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decorator</span>(<span class="params">*args,**kwargs</span>):</span><br><span class="line">   		<span class="built_in">print</span>(<span class="string">&#x27;function&#x27;</span> + func.__name__ + <span class="string">&#x27; has been called at &#x27;</span>+ datetime.now().strftime (<span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>))</span><br><span class="line">    <span class="keyword">return</span> func(*args,**kwargs)</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x,y</span>)</span><br><span class="line">	<span class="keyword">return</span> x+y</span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test</span>()</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;___________test__________&#x27;</span>)</span><br><span class="line">test()</span><br><span class="line">add(<span class="number">7</span>,<span class="number">8</span>)</span><br></pre></td></tr></table></figure>
+
+<p>装饰器就是把不改变原函数功能情况下再次添加一些功能</p>
+<h1 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h1><p>什么是迭代器，什么是可迭代对象，一个一个读取操作对象就是迭代，可迭代对象就是for循环可以读的元素就是迭代。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">比如 数组，元组，字典，列表，</span><br></pre></td></tr></table></figure>
+
+<p>迭代器可以用next获取下一个值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">letter= [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>]</span><br><span class="line"><span class="comment">#for l in letter:</span></span><br><span class="line"><span class="comment">#    print(l)</span></span><br><span class="line">it= <span class="built_in">iter</span>(letter)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">next</span>(it))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">next</span>(it))</span><br><span class="line">结果为</span><br><span class="line">a</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+<p>原理代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,a,b</span>):</span><br><span class="line">        self.a = a</span><br><span class="line">        self.b = b</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__iter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__next__</span>(<span class="params">self</span>):</span><br><span class="line">        self.a +=<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> self.a &gt; self.b:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration()</span><br><span class="line">        <span class="keyword">return</span> self.a</span><br><span class="line">test = Test(<span class="number">0</span>,<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br></pre></td></tr></table></figure>
+
+<h1 id="生成器interation"><a href="#生成器interation" class="headerlink" title="生成器interation"></a>生成器interation</h1><p>生成器首先得是一个迭代器，生成器是动态的，随时可以生成的，如果迭代对象很多，使用生成器可以节省很多内存。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g = (x**x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> g:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<p>用yield编写生成器和ruturn 返回对象</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#斐波拉契数列生成</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fib</span>(<span class="params">n</span>):</span><br><span class="line">    current =<span class="number">0</span></span><br><span class="line">    a,b = <span class="number">1</span>,<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> current &lt; n:</span><br><span class="line">        <span class="keyword">yield</span>  a</span><br><span class="line">        a,b = b, a+b</span><br><span class="line">        current +=<span class="number">1</span></span><br><span class="line">f10=fib(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> f10:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -271,7 +412,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-01 16:42:23" itemprop="dateModified" datetime="2023-11-01T16:42:23+08:00">2023-11-01</time>
+                <time title="修改时间：2023-11-09 10:28:58" itemprop="dateModified" datetime="2023-11-09T10:28:58+08:00">2023-11-09</time>
               </span>
 
           
@@ -285,8 +426,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>title：</p>
-<h2 id="什么是组"><a href="#什么是组" class="headerlink" title="什么是组"></a>什么是组</h2><p>每个部门为了完成相应的工作而布置分配的小组，便于管理和分配电脑以及网络</p>
+          <hr>
+<h2 id="title：工作组的含义"><a href="#title：工作组的含义" class="headerlink" title="title：工作组的含义"></a>title：工作组的含义</h2><h2 id="什么是组"><a href="#什么是组" class="headerlink" title="什么是组"></a>什么是组</h2><p>每个部门为了完成相应的工作而布置分配的小组，便于管理和分配电脑以及网络</p>
 <h2 id="加入工作组"><a href="#加入工作组" class="headerlink" title="加入工作组"></a>加入工作组</h2><p>更改已有的工作组名称</p>
 <h2 id="创建工作组"><a href="#创建工作组" class="headerlink" title="创建工作组"></a>创建工作组</h2><p><img src="C:\Users\HUANGZHIXIAN\AppData\Roaming\Typora\typora-user-images\image-20231012164703499.png" alt="image-20231012164703499"></p>
 <p>没有的新工作组更改会创建</p>
@@ -534,7 +675,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
