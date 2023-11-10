@@ -116,12 +116,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">13</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -178,7 +178,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/09/leetcode%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/python%E4%B9%8B%E5%85%83%E7%BB%84%E6%8B%86%E5%8C%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +192,485 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/11/09/leetcode%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2023/11/10/python%E4%B9%8B%E5%85%83%E7%BB%84%E6%8B%86%E5%8C%85/" class="post-title-link" itemprop="url">python之元组拆包</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-10 09:36:53 / 修改时间：09:45:29" itemprop="dateCreated datePublished" datetime="2023-11-10T09:36:53+08:00">2023-11-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#元组拆包</span></span><br><span class="line">A = (<span class="string">&#x27;HELLO&#x27;</span>,<span class="string">&#x27;WORLD&#x27;</span>)</span><br><span class="line">b,c =A</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line">t = (<span class="string">&#x27;hhhh&#x27;</span>,<span class="number">18</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;i am &#123;&#125;,i am &#123;&#125; years old.&#x27;</span>.<span class="built_in">format</span>(*t))</span><br></pre></td></tr></table></figure>
+
+<p><strong>元组（Tuple）:</strong></p>
+<p>元组是一种有序的、不可变的数据类型。与列表相似，元组用于存储多个元素，但它们是不可变的，即一旦创建就不能修改。元组使用圆括号 <code>()</code> 来定义，元素之间用逗号 <code>,</code> 分隔。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my_tuple = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">&quot;hello&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>元组中的元素可以包含不同的数据类型，并且元组可以嵌套。</p>
+<p><strong>元组拆包（Tuple Unpacking）:</strong></p>
+<p>元组拆包是指将元组中的元素解包（分解）到单独的变量中。这可以通过在赋值语句的左侧使用相同数量的变量来实现。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 元组拆包</span></span><br><span class="line">my_tuple = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">a, b, c = my_tuple</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>a</code> 将被赋值为 1，<code>b</code> 将被赋值为 2，<code>c</code> 将被赋值为 3。</p>
+<p>元组拆包的实际应用非常广泛，例如在函数返回多个值时：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_coordinates</span>():</span><br><span class="line">    <span class="keyword">return</span> (<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>)</span><br><span class="line"></span><br><span class="line">x, y, z = get_coordinates()</span><br></pre></td></tr></table></figure>
+
+<p>或者交换两个变量的值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">a, b = b, a</span><br><span class="line"><span class="comment"># 现在 a 的值是 2，b 的值是 1</span></span><br></pre></td></tr></table></figure>
+
+<p>元组拆包是一种方便的方式，可以使代码更加简洁，同时提高可读性。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/python%E4%B9%8B%E5%88%97%E8%A1%A8%E8%A7%A3%E6%9E%90%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/10/python%E4%B9%8B%E5%88%97%E8%A1%A8%E8%A7%A3%E6%9E%90%E5%BC%8F/" class="post-title-link" itemprop="url">python之列表（字典）解析式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-10 09:18:56 / 修改时间：09:36:39" itemprop="dateCreated datePublished" datetime="2023-11-10T09:18:56+08:00">2023-11-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nubmers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">l = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nubmers ]</span><br><span class="line"><span class="built_in">print</span>(l)</span><br><span class="line"><span class="comment">#[1, 4, 16, 25, 36]</span></span><br><span class="line">l = [x <span class="keyword">for</span> x <span class="keyword">in</span> nubmers <span class="keyword">if</span> x % <span class="number">2</span> ==<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(l)</span><br><span class="line"><span class="comment">#[2, 4, 6]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">是的，除了列表生成式，Python 还提供了字典生成式（Dictionary Comprehension）。字典生成式允许你以一种简洁的方式创建新的字典。</span><br><span class="line"></span><br><span class="line">字典生成式的基本形式如下：</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">new_dict = &#123;key_expr: value_expr <span class="keyword">for</span> item <span class="keyword">in</span> iterable <span class="keyword">if</span> condition&#125;</span><br><span class="line">```</span><br><span class="line"></span><br><span class="line">其中：</span><br><span class="line">- `key_expr` 是对 `item` 计算键的表达式。</span><br><span class="line">- `value_expr` 是对 `item` 计算值的表达式。</span><br><span class="line">- `item` 是可迭代对象中的元素。</span><br><span class="line">- `iterable` 是被迭代的对象。</span><br><span class="line">- `condition` 是一个可选的条件，只有满足条件的元素才会被包含在新字典中。</span><br><span class="line"></span><br><span class="line">下面是一个简单的例子：</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"><span class="comment"># 字典生成式</span></span><br><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">squared_dict = &#123;x: x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> numbers <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>&#125;</span><br><span class="line"><span class="comment"># 结果为 &#123;2: 4, 4: 16&#125;</span></span><br><span class="line">```</span><br><span class="line"></span><br><span class="line">在这个例子中，字典生成式使用了列表中的偶数作为键，计算了它们的平方作为值，创建了一个新的字典。</span><br><span class="line"></span><br><span class="line">字典生成式的语法与列表生成式非常相似，只是用花括号 `&#123;&#125;` 表示字典。字典生成式在处理需要将可迭代对象的元素映射到键值对时非常有用。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dict</span>= &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>&#125;</span><br><span class="line">new_dict = &#123;k:x**<span class="number">2</span> <span class="keyword">for</span> k,x <span class="keyword">in</span> <span class="built_in">dict</span>.items()&#125;</span><br><span class="line"><span class="built_in">print</span>(new_dict)</span><br></pre></td></tr></table></figure>
+
+<p>字典不可被迭代，使用要用字典.items可迭代对象来做。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/python%E4%B9%8B%E5%88%87%E7%89%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/10/python%E4%B9%8B%E5%88%87%E7%89%87/" class="post-title-link" itemprop="url">python之切片</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-10 09:11:30 / 修改时间：09:17:26" itemprop="dateCreated datePublished" datetime="2023-11-10T09:11:30+08:00">2023-11-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在 Python 中，切片（Slicing）是一种用于从序列（如列表、元组、字符串等）中获取子序列的方法。切片通过指定起始索引、终止索引和步长来定义。切片的基本语法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sequence[start:stop:step]</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>start</code> 是切片开始的索引，默认为序列的开头。</li>
+<li><code>stop</code> 是切片结束的索引（不包括该索引对应的元素），默认为序列的末尾。</li>
+<li><code>step</code> 是切片的步长，表示取值的间隔，默认为 1。</li>
+</ul>
+<p>下面是一些切片的示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列表的切片</span></span><br><span class="line">my_list = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取索引 2 到 5（不包括）的子列表</span></span><br><span class="line">subset = my_list[<span class="number">2</span>:<span class="number">5</span>]</span><br><span class="line"><span class="built_in">print</span>(subset)  <span class="comment"># 输出 [2, 3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取整个列表的反向副本</span></span><br><span class="line">reverse_list = my_list[::-<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(reverse_list)  <span class="comment"># 输出 [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 字符串的切片</span></span><br><span class="line">my_string = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取字符串的前五个字符</span></span><br><span class="line">substring = my_string[:<span class="number">5</span>]</span><br><span class="line"><span class="built_in">print</span>(substring)  <span class="comment"># 输出 &quot;Hello&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用步长获取字符串中的偶数索引字符</span></span><br><span class="line">even_chars = my_string[::<span class="number">2</span>]</span><br><span class="line"><span class="built_in">print</span>(even_chars)  <span class="comment"># 输出 &quot;Hlo ol!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 元组的切片</span></span><br><span class="line">my_tuple = (<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取索引 1 到 4（不包括）的子元组</span></span><br><span class="line">subtuple = my_tuple[<span class="number">1</span>:<span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(subtuple)  <span class="comment"># 输出 (1, 2, 3)</span></span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，切片是半开区间，即切片的起始索引包含在内，而终止索引不包含在内。这符合 Python 中的惯例，例如 <code>range()</code> 函数的行为。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#切片特性用来复制</span></span><br><span class="line">a =  [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">56</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line">b = a[:]</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"></span><br><span class="line"><span class="comment">#[1, 3, 4, 56, 6, 7]</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/python%E4%B9%8B%E5%81%8F%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/10/python%E4%B9%8B%E5%81%8F%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">python之偏函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-10 09:02:07 / 修改时间：09:08:45" itemprop="dateCreated datePublished" datetime="2023-11-10T09:02:07+08:00">2023-11-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>偏函数（Partial Function）是指通过部分固定函数的参数，创建一个新的函数。在 Python 中，可以使用 <code>functools</code> 模块的 <code>partial</code> 函数来实现。</p>
+<p>偏函数的作用主要有两个：</p>
+<ol>
+<li><p><strong>固定函数的部分参数：</strong> 通过指定函数的一部分参数，创建一个新的函数，将这部分参数固定下来。这样可以简化函数调用，减少代码中的重复。</p>
+</li>
+<li><p><strong>参数默认值的设置：</strong> 可以通过偏函数设置函数的默认参数值，从而在创建新函数时为特定参数提供默认值。</p>
+</li>
+</ol>
+<p>下面是一个简单的例子，演示了偏函数的用法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> partial</span><br><span class="line"></span><br><span class="line"><span class="comment"># 原始函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">power</span>(<span class="params">base, exponent</span>):</span><br><span class="line">    <span class="keyword">return</span> base ** exponent</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用偏函数，固定 base 参数为 2</span></span><br><span class="line">square = partial(power, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用新的偏函数</span></span><br><span class="line">result = square(exponent=<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(result)  <span class="comment"># 输出 8</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>power</code> 函数接受两个参数，而 <code>square</code> 是通过偏函数创建的新函数，其中 <code>base</code> 参数被固定为 2。当调用 <code>square</code> 时，只需要提供 <code>exponent</code> 参数，而 <code>base</code> 参数已经被固定为 2，从而实现了计算平方的简便性。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/python%E4%B9%8B%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/10/python%E4%B9%8B%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">python之匿名函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-10 08:53:45 / 修改时间：09:08:34" itemprop="dateCreated datePublished" datetime="2023-11-10T08:53:45+08:00">2023-11-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><p>匿名函数，也称为 lambda 函数，是一种在 Python 中创建小型、一次性的、简单的函数的方式。它们使用 <code>lambda</code> 关键字定义，通常用于需要传递函数作为参数的情况。</p>
+<p>主要作用包括以下几点：</p>
+<ol>
+<li><p><strong>简洁性：</strong> Lambda 函数通常是一行代码，语法简洁，适用于一些简单的操作。使用 lambda 函数可以避免定义正式的函数体。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add = <span class="keyword">lambda</span> x, y: x + y</span><br><span class="line"><span class="built_in">print</span>(add(<span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># 输出 5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>传递函数：</strong> Lambda 函数常用于作为参数传递给高阶函数（接受函数作为参数的函数）。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">squared_numbers = <span class="built_in">map</span>(<span class="keyword">lambda</span> x: x**<span class="number">2</span>, numbers)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(squared_numbers))  <span class="comment"># 输出 [1, 4, 9, 16, 25]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>短期使用：</strong> 当你只需要在某个地方定义一个短期使用的函数，而不希望为其正式定义一个命名函数时，可以使用匿名函数。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Charlie&#x27;</span>]</span><br><span class="line">sorted_names = <span class="built_in">sorted</span>(names, key=<span class="keyword">lambda</span> x: <span class="built_in">len</span>(x))</span><br><span class="line"><span class="built_in">print</span>(sorted_names)  <span class="comment"># 输出 [&#x27;Bob&#x27;, &#x27;Alice&#x27;, &#x27;Charlie&#x27;]</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>请注意，匿名函数通常用于简单的操作。对于复杂的函数逻辑，更好的做法是使用正式的命名函数，以提高可读性和可维护性。</p>
+<h3 id="参数传递方法"><a href="#参数传递方法" class="headerlink" title="参数传递方法"></a>参数传递方法</h3><p>：前是设置函数参数</p>
+<p>：后是函数体</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/10/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">高级函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-10 08:28:13 / 修改时间：09:09:24" itemprop="dateCreated datePublished" datetime="2023-11-10T08:28:13+08:00">2023-11-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="SORTED"><a href="#SORTED" class="headerlink" title="SORTED"></a>SORTED</h1><p>排序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sorted</span></span><br><span class="line">L = [<span class="string">&#x27;PYTHON&#x27;</span>,<span class="string">&#x27;JAVA&#x27;</span>,<span class="string">&#x27;GO&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;C++&#x27;</span>]</span><br><span class="line">a=<span class="built_in">sorted</span>(L)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>设置key参数来按照什么排序，比如设置abs排序</p>
+<p><code>sorted()</code> 函数是 Python 内置函数之一，用于对可迭代对象（例如列表、元组等）进行排序。<code>sorted()</code> 返回一个新的已排序的列表，而不改变原始对象。</p>
+<p><code>sorted()</code> 函数的基本语法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sorted</span>(iterable, key=<span class="literal">None</span>, reverse=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>iterable</code> 是要排序的可迭代对象，例如列表或元组。</li>
+<li><code>key</code> 是一个可选参数，用于指定一个函数，该函数将应用于每个元素以生成排序的依据。默认值为 <code>None</code>，表示按照元素本身的值进行排序。</li>
+<li><code>reverse</code> 是一个可选参数，如果设置为 <code>True</code>，则按照降序进行排序；默认为 <code>False</code>，表示按照升序排序。</li>
+</ul>
+<p>下面是一个简单的例子，演示了如何使用 <code>sorted()</code> 对一个列表进行排序：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">1</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 sorted() 对列表进行升序排序</span></span><br><span class="line">sorted_numbers = <span class="built_in">sorted</span>(numbers)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;升序排序:&quot;</span>, sorted_numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 sorted() 对列表进行降序排序</span></span><br><span class="line">reverse_sorted_numbers = <span class="built_in">sorted</span>(numbers, reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;降序排序:&quot;</span>, reverse_sorted_numbers)</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>sorted()</code> 函数被用于对 <code>numbers</code> 列表进行排序。<code>sorted_numbers</code> 包含了升序排序后的列表，而 <code>reverse_sorted_numbers</code> 包含了降序排序后的列表。</p>
+<p>需要注意的是，<code>sorted()</code> 不会改变原始列表，而是返回一个新的已排序的列表。如果你想在原地修改列表，可以使用列表的 <code>sort()</code> 方法，例如 <code>numbers.sort()</code>。</p>
+<h1 id="FILTER"><a href="#FILTER" class="headerlink" title="FILTER"></a>FILTER</h1><p>过滤</p>
+<p><code>filter()</code> 函数是Python内置函数之一，用于过滤可迭代对象（例如列表、元组等）中的元素，返回一个由使得指定函数返回 <code>True</code> 的元素组成的迭代器。</p>
+<p><code>filter()</code> 函数的基本语法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">filter</span>(function, iterable)</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>function</code> 是一个用于过滤的函数，该函数返回 <code>True</code> 或 <code>False</code>。</li>
+<li><code>iterable</code> 是要过滤的可迭代对象，例如列表、元组等。</li>
+</ul>
+<p><code>filter()</code> 函数将返回一个迭代器，包含了使得 <code>function</code> 返回 <code>True</code> 的元素。</p>
+<p>下面是一个简单的例子，演示了如何使用 <code>filter()</code> 过滤一个列表中的偶数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个函数，用于过滤偶数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_even</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x % <span class="number">2</span> == <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 要过滤的列表</span></span><br><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 filter() 过滤偶数</span></span><br><span class="line">filtered_numbers = <span class="built_in">filter</span>(is_even, numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将结果转换为列表并打印</span></span><br><span class="line">result = <span class="built_in">list</span>(filtered_numbers)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>is_even</code> 函数用于判断一个数字是否为偶数，然后 <code>filter()</code> 函数使用这个函数过滤了 <code>numbers</code> 列表，返回一个包含偶数的迭代器。最后，通过将迭代器转换为列表，我们得到了过滤后的结果。</p>
+<p>需要注意的是，<code>filter()</code> 返回的是一个迭代器，因此在实际使用中可能需要将其转换为列表或者进行其他操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">1</span>,<span class="string">&#x27;hahaha&#x27;</span>,<span class="number">3.14</span>]</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">a</span>(<span class="params"><span class="built_in">object</span></span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(<span class="built_in">object</span>,<span class="built_in">int</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(a(<span class="built_in">list</span>(b)))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">filter</span>(a,b))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">filter</span>(a,b)))</span><br><span class="line"></span><br><span class="line"><span class="comment">#result:</span></span><br><span class="line"><span class="comment">#False</span></span><br><span class="line"><span class="comment">#&lt;filter object at 0x000001F585F40F40&gt;</span></span><br><span class="line"><span class="comment">#[1]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="MAP函数"><a href="#MAP函数" class="headerlink" title="MAP函数"></a>MAP函数</h1><p><code>map()</code> 函数是 Python 内置函数之一，用于将一个函数应用于一个或多个可迭代对象（例如列表、元组等）的对应元素，返回一个包含结果的迭代器。其基本语法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">map</span>(function, iterable, ...)</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>function</code> 是要应用的函数。</li>
+<li><code>iterable</code> 是一个或多个可迭代对象，表示要将函数应用于的输入数据。</li>
+</ul>
+<p><code>map()</code> 函数会对每个可迭代对象中的元素调用指定的函数，并返回一个包含结果的迭代器。如果有多个可迭代对象，函数将并行应用于它们的对应元素。</p>
+<p>下面是一个简单的例子，演示了如何使用 <code>map()</code> 函数将一个列表中的每个元素平方：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个函数，用于计算平方</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">square</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 要处理的列表</span></span><br><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 map() 应用函数到列表的每个元素</span></span><br><span class="line">squared_numbers = <span class="built_in">map</span>(square, numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将结果转换为列表并打印</span></span><br><span class="line">result = <span class="built_in">list</span>(squared_numbers)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>square</code> 函数用于计算一个数字的平方，然后 <code>map()</code> 函数将这个函数应用于 <code>numbers</code> 列表的每个元素，返回一个包含平方结果的迭代器。最后，通过将迭代器转换为列表，我们得到了处理后的结果。</p>
+<p>需要注意的是，<code>map()</code> 返回一个迭代器，因此在实际使用中可能需要将其转换为列表或者进行其他操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">b = [-<span class="number">1</span>,-<span class="number">2</span>,<span class="number">3</span>,-<span class="number">4</span>,<span class="number">5</span>,-<span class="number">6</span>,<span class="number">7</span>,-<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">a</span>(<span class="params">i</span>):</span><br><span class="line">    <span class="keyword">return</span> i**<span class="number">2</span></span><br><span class="line"><span class="built_in">map</span>(a,b)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">map</span>(a,b)))</span><br><span class="line"><span class="comment">#[1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>我记得有时候将两个值付给两个变量也可以用map</strong></p>
+<p>您是正确的！在 Python 中，<code>map()</code> 函数可以用于同时处理多个可迭代对象，并将它们的元素逐一传递给一个函数。当函数接受多个参数时，<code>map()</code> 将每个可迭代对象的元素分别传递给函数的对应参数。</p>
+<p>下面是一个简单的例子，演示了如何使用 <code>map()</code> 将两个列表对应位置的元素相加：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 两个列表</span></span><br><span class="line">numbers1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">numbers2 = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，将两个数相加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x, y</span>):</span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 map() 将函数应用于两个列表的对应元素</span></span><br><span class="line">sum_result = <span class="built_in">map</span>(add, numbers1, numbers2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将结果转换为列表并打印</span></span><br><span class="line">result = <span class="built_in">list</span>(sum_result)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>add</code> 函数接受两个参数，并返回它们的和。<code>map()</code> 函数将 <code>add</code> 应用于 <code>numbers1</code> 和 <code>numbers2</code> 列表的对应位置的元素，返回一个包含相加结果的迭代器。最后，通过将迭代器转换为列表，我们得到了处理后的结果。</p>
+<p>这种用法使得 <code>map()</code> 在同时处理多个可迭代对象时非常方便。请注意，被传递给函数的参数数量必须与传递给 <code>map()</code> 函数的可迭代对象数量相匹配。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/python%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/10/python%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">未命名</a>
         </h2>
 
         <div class="post-meta">
@@ -202,7 +680,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2023-11-09 17:29:25" itemprop="dateCreated datePublished" datetime="2023-11-09T17:29:25+08:00">2023-11-09</time>
+              <time title="创建时间：2023-11-10 08:16:49" itemprop="dateCreated datePublished" datetime="2023-11-10T08:16:49+08:00">2023-11-10</time>
             </span>
 
           
@@ -217,7 +695,71 @@
 
       
           <hr>
-<h2 id="title：leetcode-简单题之两数之和-python解法"><a href="#title：leetcode-简单题之两数之和-python解法" class="headerlink" title="title：leetcode 简单题之两数之和 python解法"></a>title：leetcode 简单题之两数之和 python解法</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a><em><strong>题目</strong></em></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</span><br><span class="line"></span><br><span class="line">你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</span><br><span class="line"></span><br><span class="line">你可以按任意顺序返回答案。</span><br></pre></td></tr></table></figure>
+<h2 id="title-python高级特性之高阶函数"><a href="#title-python高级特性之高阶函数" class="headerlink" title="title:python高级特性之高阶函数"></a>title:python高级特性之高阶函数</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/09/leetcode%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/09/leetcode%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="post-title-link" itemprop="url">leetcode 简单题之两数之和 python解法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-09 17:29:25" itemprop="dateCreated datePublished" datetime="2023-11-09T17:29:25+08:00">2023-11-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-10 09:08:57" itemprop="dateModified" datetime="2023-11-10T09:08:57+08:00">2023-11-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a><em><strong>题目</strong></em></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</span><br><span class="line"></span><br><span class="line">你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</span><br><span class="line"></span><br><span class="line">你可以按任意顺序返回答案。</span><br></pre></td></tr></table></figure>
 
 <h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a><em><strong>思路分析</strong></em></h3><p>这道题没有难度，主要考验的是对循环的使用，内嵌套一个双循环，定一个外层内层循环，再遍历内循环，去一一对比两数之和等于目标值的序号，结果返回序号就行。</p>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><em><strong>题解</strong></em></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>,n):</span><br><span class="line">                <span class="keyword">if</span> nums[i]+ nums[j] ==target:</span><br><span class="line">                    <span class="keyword">return</span> [i,j]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -255,7 +797,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/11/09/python%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A3%85%E9%A5%B0%E5%99%A8/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2023/11/09/python%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A3%85%E9%A5%B0%E5%99%A8/" class="post-title-link" itemprop="url">装饰器 + 迭代器+生成器</a>
         </h2>
 
         <div class="post-meta">
@@ -264,10 +806,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-11-09 11:02:28 / 修改时间：18:47:11" itemprop="dateCreated datePublished" datetime="2023-11-09T11:02:28+08:00">2023-11-09</time>
+              <time title="创建时间：2023-11-09 11:02:28" itemprop="dateCreated datePublished" datetime="2023-11-09T11:02:28+08:00">2023-11-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-10 09:09:06" itemprop="dateModified" datetime="2023-11-10T09:09:06+08:00">2023-11-10</time>
+              </span>
 
           
 
@@ -280,8 +828,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <hr>
-<h2 id="title-装饰器-迭代器-生成器"><a href="#title-装饰器-迭代器-生成器" class="headerlink" title="title:装饰器 + 迭代器+生成器"></a>title:装饰器 + 迭代器+生成器</h2><h1 id="装饰器的功能"><a href="#装饰器的功能" class="headerlink" title="装饰器的功能"></a>装饰器的功能</h1><p>可以添加模块以外的各种小功能</p>
+          <h1 id="装饰器的功能"><a href="#装饰器的功能" class="headerlink" title="装饰器的功能"></a>装饰器的功能</h1><p>可以添加模块以外的各种小功能</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#！/usr/bin/env python3 #指定解释器</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decorator</span>(<span class="params">*args,**kwargs</span>):</span><br><span class="line">   		<span class="built_in">print</span>(<span class="string">&#x27;function&#x27;</span> + func.__name__ + <span class="string">&#x27; has been called at &#x27;</span>+ datetime.now().strftime (<span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>))</span><br><span class="line">    <span class="keyword">return</span> func(*args,**kwargs)</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x,y</span>)</span><br><span class="line">	<span class="keyword">return</span> x+y</span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test</span>()</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;___________test__________&#x27;</span>)</span><br><span class="line">test()</span><br><span class="line">add(<span class="number">7</span>,<span class="number">8</span>)</span><br></pre></td></tr></table></figure>
 
 <p>装饰器就是把不改变原函数功能情况下再次添加一些功能</p>
@@ -333,7 +880,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/11/02/Python-%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2023/11/02/Python-%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Python 面向过程编程笔记</a>
         </h2>
 
         <div class="post-meta">
@@ -345,6 +892,13 @@
 
               <time title="创建时间：2023-11-02 19:11:05" itemprop="dateCreated datePublished" datetime="2023-11-02T19:11:05+08:00">2023-11-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-10 09:09:11" itemprop="dateModified" datetime="2023-11-10T09:09:11+08:00">2023-11-10</time>
+              </span>
 
           
 
@@ -357,8 +911,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <hr>
-<h2 id="title-Python-面向过程编程笔记"><a href="#title-Python-面向过程编程笔记" class="headerlink" title="title:Python 面向过程编程笔记"></a>title:Python 面向过程编程笔记</h2><h1 id="PYTHON"><a href="#PYTHON" class="headerlink" title="PYTHON"></a>PYTHON</h1><h2 id="1-先说什么是面向过程和面向对象"><a href="#1-先说什么是面向过程和面向对象" class="headerlink" title="1.先说什么是面向过程和面向对象"></a>1.先说什么是面向过程和面向对象</h2><ol>
+          <h1 id="PYTHON"><a href="#PYTHON" class="headerlink" title="PYTHON"></a>PYTHON</h1><h2 id="1-先说什么是面向过程和面向对象"><a href="#1-先说什么是面向过程和面向对象" class="headerlink" title="1.先说什么是面向过程和面向对象"></a>1.先说什么是面向过程和面向对象</h2><ol>
 <li>面向过程：面向过程编程是一种基于过程或函数的编程范式。在面向过程编程中，程序主要由一系列函数或过程组成，这些函数用于执行特定的任务。<strong>程序的控制流是线性的，从一个函数调用到另一个函数，依次执行。通常数据以全局变量或局部变量的形式存储，而函数则操作这些数据。</strong>针对过程编程强调程序的步骤和过程，而不关注数据的抽象和封装。</li>
 <li>面向对象：面向对象编程是一种<strong>以对象为中心</strong>的编程范式。在面向对象编程中，程序通过创建和操作对象来实现功能。<strong>对象是具有状态（属性）和行为（方法）的实体，它们可以面向对象编程数据增强的抽象和封装，以及通过类来定义对象的模板。类是对象的蓝图，定义了对象的属性和方法</strong>。面向对象编程有主要的四个结构：封装、继承、多状态和抽象。</li>
 </ol>
@@ -377,238 +930,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/31/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄小贤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="修炼完去打佩恩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/10/31/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%84/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-10-31 22:41:37" itemprop="dateCreated datePublished" datetime="2023-10-31T22:41:37+08:00">2023-10-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-09 10:28:58" itemprop="dateModified" datetime="2023-11-09T10:28:58+08:00">2023-11-09</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<h2 id="title：工作组的含义"><a href="#title：工作组的含义" class="headerlink" title="title：工作组的含义"></a>title：工作组的含义</h2><h2 id="什么是组"><a href="#什么是组" class="headerlink" title="什么是组"></a>什么是组</h2><p>每个部门为了完成相应的工作而布置分配的小组，便于管理和分配电脑以及网络</p>
-<h2 id="加入工作组"><a href="#加入工作组" class="headerlink" title="加入工作组"></a>加入工作组</h2><p>更改已有的工作组名称</p>
-<h2 id="创建工作组"><a href="#创建工作组" class="headerlink" title="创建工作组"></a>创建工作组</h2><p><img src="C:\Users\HUANGZHIXIAN\AppData\Roaming\Typora\typora-user-images\image-20231012164703499.png" alt="image-20231012164703499"></p>
-<p>没有的新工作组更改会创建</p>
-<p>重启</p>
-<h2 id="退出工作组"><a href="#退出工作组" class="headerlink" title="退出工作组"></a>退出工作组</h2><p>改掉名称就行，工作组就如一个社团一样 </p>
-<h2 id="工作组优缺点"><a href="#工作组优缺点" class="headerlink" title="工作组优缺点"></a>工作组优缺点</h2><p>优点</p>
-<p>1.方便管理维护</p>
-<p>2.资源分配灵活方便</p>
-<p>缺点</p>
-<p>1.缺乏集中管理和控制机制</p>
-<p>2.没有集中的统一账户管理</p>
-<p>3.知识和小规模用户的使用  </p>
-<h2 id="如何访问？"><a href="#如何访问？" class="headerlink" title="如何访问？"></a>如何访问？</h2><p>图形化：进入网络，输入账号密码，内网</p>
-<p>高级共享设置可以设置网络，共享，密码保护</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/31/windows%E5%9F%9F%E7%9A%84%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄小贤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="修炼完去打佩恩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/10/31/windows%E5%9F%9F%E7%9A%84%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">认识windows域</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-10-31 22:41:37" itemprop="dateCreated datePublished" datetime="2023-10-31T22:41:37+08:00">2023-10-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-01 16:43:21" itemprop="dateModified" datetime="2023-11-01T16:43:21+08:00">2023-11-01</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="windows域的概念"><a href="#windows域的概念" class="headerlink" title="windows域的概念"></a>windows域的概念</h1><h2 id="域的概念（concept）"><a href="#域的概念（concept）" class="headerlink" title="域的概念（concept）"></a>域的概念（concept）</h2><p>域是计算机网络的一种形式，其中所有用户账户，计算机，打印机和其他安全主体都位于域控制器里的一个或多个中央计算机集群上的中央数据库中注册。身份验证也位于域控制器上进行。</p>
-<p><em><strong>域（domain）相当于一个升级的工作组</strong></em></p>
-<p>域是一个拥有安全边界的计算机集合，一个域无法访问另一个域的资源。</p>
-<p><em><strong>域控制器（domain controller,dc） 相当于域中的一台管理服务器的计算机（部门老大）</strong></em></p>
-<p><em><strong>域控制器里面存在这个域中的账户密码，属于这个域的计算机登信息构成的数据库。</strong></em></p>
-<p>计算机如果要连接这个域，域控制器就要鉴别这台计算机是否属于这个域，以及用户使用的登录账号是否存在，密码是否正确，如果以上信息有一项不正确，域控制器就会拒绝这台计算机登录，也不能访问这个资源。</p>
-<p>域控制器是整个域的通信枢纽，所有权限身份验证都在域控制器上进行，所有域内所有验证身份的账户密码散列值都在域控制器里。</p>
-<h2 id="单域"><a href="#单域" class="headerlink" title="单域"></a>单域</h2><p>通常在一个地理位置固定的小公司里，一个域就可以满足需求，在一个域内，一般要至少两台域服务器，一台作为DC，另一台作为备份DC。一般情况下，dc又是域控也会当作域名服务器使用。</p>
-<p><img src="C:\Users\HUANGZHIXIAN\AppData\Roaming\Typora\typora-user-images\image-20231012173843455.png" alt="image-20231012173843455"></p>
-<h2 id="父域和子域"><a href="#父域和子域" class="headerlink" title="父域和子域"></a>父域和子域</h2><h2 id="域树"><a href="#域树" class="headerlink" title="域树"></a>域树</h2><p>多个父域子域组成的</p>
-<p>人多了，单域无法满足</p>
-<p>森林</p>
-<h1 id="搭建域环境"><a href="#搭建域环境" class="headerlink" title="搭建域环境"></a>搭建域环境</h1><p>条件：</p>
-<p>域控+域内主机+域内主机</p>
-<h2 id="活动目录（类似于DC的数据库）"><a href="#活动目录（类似于DC的数据库）" class="headerlink" title="活动目录（类似于DC的数据库）"></a>活动目录（类似于DC的数据库）</h2><p>ad就是提供目录服务的组件</p>
-<p>目录用于存储有关网络对象的信息，可以管理组</p>
-<h2 id="组织单元（OU）容器可部署策略，domain-controller"><a href="#组织单元（OU）容器可部署策略，domain-controller" class="headerlink" title="组织单元（OU）容器可部署策略，domain controller"></a>组织单元（OU）容器可部署策略，domain controller</h2><h2 id="委派控制"><a href="#委派控制" class="headerlink" title="委派控制"></a>委派控制</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/31/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄小贤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="修炼完去打佩恩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/10/31/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-10-31 20:59:30" itemprop="dateCreated datePublished" datetime="2023-10-31T20:59:30+08:00">2023-10-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -675,9 +1001,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
