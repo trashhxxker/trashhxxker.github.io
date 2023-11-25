@@ -121,7 +121,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">19</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -174,6 +174,407 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/antibrutebroke/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/25/antibrutebroke/" class="post-title-link" itemprop="url">antibrutebroke</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-25 14:37:05 / 修改时间：14:40:06" itemprop="dateCreated datePublished" datetime="2023-11-25T14:37:05+08:00">2023-11-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="如何实现暴力破解项目"><a href="#如何实现暴力破解项目" class="headerlink" title="如何实现暴力破解项目"></a>如何实现暴力破解项目</h1><p>1.打开安全日志</p>
+<p>2.对日志进行实时监控</p>
+<p>3.解析每一行的内容，找出正在爆破的ip</p>
+<p>4.设置一个阈值，查过一个阈值之后直接封禁。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/17/linux%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/17/linux%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%A4%8D%E4%B9%A0/" class="post-title-link" itemprop="url">linux日志分析复习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-17 17:19:05 / 修改时间：17:43:20" itemprop="dateCreated datePublished" datetime="2023-11-17T17:19:05+08:00">2023-11-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/var/log/cron #记录系统定时任务</span><br><span class="line">/var/log/cups #打印信息的日志</span><br><span class="line">/var/log/message #记录的重要信息的日志</span><br><span class="line">/var/log/btmp #登录失败日志</span><br><span class="line">/var/log/lastlog #最后一次登录</span><br><span class="line">/var/log/wtmp #成功登录记录</span><br><span class="line">/var/log/secure #登录日志</span><br><span class="line">/var/log/utmp #目前登录用户的信息</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hosts黑名单	/etc/hosts.deny</span><br><span class="line">hosts白名单	/etc/hosts.allow</span><br></pre></td></tr></table></figure>
+
+<p>分析技巧</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">find</span><br><span class="line">grep          -A -B -C 是什么意思前五行后五行</span><br><span class="line">awk</span><br><span class="line">sed</span><br><span class="line">cat</span><br><span class="line"></span><br><span class="line">tail -f 默认输出内容后十行 在f前加数字就可以更改数量行数</span><br><span class="line">tail -n +5 </span><br><span class="line">head</span><br><span class="line">从第十行开始显示五行</span><br><span class="line">tail -n +10 |head -n 5</span><br><span class="line">find / -name 搜索内容</span><br><span class="line">awk -F ：&#x27;&#123;print $1&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/16/python%E9%A1%B9%E7%9B%AE1%EF%BC%9A%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/16/python%E9%A1%B9%E7%9B%AE1%EF%BC%9A%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" class="post-title-link" itemprop="url">python项目1：暴力破解</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-16 21:14:35" itemprop="dateCreated datePublished" datetime="2023-11-16T21:14:35+08:00">2023-11-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-17 17:51:47" itemprop="dateModified" datetime="2023-11-17T17:51:47+08:00">2023-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h1><p>只要是暴露在公网云服务器，每天都有大量的暴力破解行为。</p>
+<p>解决办法：</p>
+<p>1.更换端口（无济于事）</p>
+<p>2.买云防护，waf（贵）</p>
+<p>暴力破解的一个自动阻断</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">涉及到的模块</span><br><span class="line">re（正则表达式模块）</span><br><span class="line">subprocess模块</span><br></pre></td></tr></table></figure>
+
+<h2 id="re模块"><a href="#re模块" class="headerlink" title="re模块"></a>re模块</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">从对象的字符串里面匹配</span><br><span class="line"><span class="comment">#匹配普通字符</span></span><br><span class="line"><span class="comment">#findall函数:找到匹配到的所有子串，并返回一个列表，如果没有匹配到的话，就返回空</span></span><br><span class="line"><span class="keyword">import</span>  re</span><br><span class="line">s = <span class="string">&#x27;hello 奥特曼hellohello 520&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;hello&#x27;</span>,s))</span><br><span class="line"><span class="comment">#search函数：功能是扫描整个字符串，并且返回第一个</span></span><br><span class="line">m=re.search(<span class="string">&#x27;奥特曼&#x27;</span>,s)</span><br><span class="line"><span class="built_in">print</span>(m.group(),m.span())</span><br><span class="line"><span class="comment">#answer</span></span><br><span class="line"><span class="comment">#[&#x27;hello&#x27;, &#x27;hello&#x27;, &#x27;hello&#x27;]</span></span><br><span class="line"><span class="comment">#奥特曼 (6, 9)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="匹配元字符"><a href="#匹配元字符" class="headerlink" title="匹配元字符"></a>匹配元字符</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\d  <span class="comment">#匹配所有数字0-9</span></span><br><span class="line">\D	<span class="comment">#匹配非数字</span></span><br><span class="line">\w	<span class="comment">#匹配所有单词字符，包括大小写 数字 下划线 中文</span></span><br><span class="line">\W	<span class="comment">#匹配剩下的，空格 特殊字符</span></span><br></pre></td></tr></table></figure>
+
+<p>​	</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">s = <span class="string">&#x27;SJDFSDJF42342#$@!\nGPT 黄智贤&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\w&#x27;</span>,s))</span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\d&#x27;</span>,s))</span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\W&#x27;</span>,s))</span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\D&#x27;</span>,s))</span><br><span class="line"><span class="comment">#结果</span></span><br><span class="line">[<span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;G&#x27;</span>, <span class="string">&#x27;P&#x27;</span>, <span class="string">&#x27;T&#x27;</span>, <span class="string">&#x27;黄&#x27;</span>, <span class="string">&#x27;智&#x27;</span>, <span class="string">&#x27;贤&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;#&#x27;</span>, <span class="string">&#x27;$&#x27;</span>, <span class="string">&#x27;@&#x27;</span>, <span class="string">&#x27;!&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27; &#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;#&#x27;</span>, <span class="string">&#x27;$&#x27;</span>, <span class="string">&#x27;@&#x27;</span>, <span class="string">&#x27;!&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;G&#x27;</span>, <span class="string">&#x27;P&#x27;</span>, <span class="string">&#x27;T&#x27;</span>, <span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;黄&#x27;</span>, <span class="string">&#x27;智&#x27;</span>, <span class="string">&#x27;贤&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集 []"></a>字符集 []</h2><p>字符的集合，用[]表示，字符集内用 “ ^” 表示 “非”</p>
+<p>\d &#x3D; [0-9]</p>
+<p>\D &#x3D; [  ^0-9 ]</p>
+<h2 id="匹配空白字符-s"><a href="#匹配空白字符-s" class="headerlink" title="匹配空白字符 \s"></a>匹配空白字符 \s</h2><p>‘ ’   </p>
+<p>\n 空行符</p>
+<p>\t 制表符</p>
+<p>\r 回车符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">&#x27;      \npython 我是打沙包\r&#x27;</span></span><br><span class="line">要过滤空白符</span><br><span class="line">可以这样</span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;[^\s]&#x27;</span>,s1))</span><br></pre></td></tr></table></figure>
+
+<h2 id="匹配标定的"><a href="#匹配标定的" class="headerlink" title="匹配标定的 {}"></a>匹配标定的 {}</h2><p>类似与长度，可以标定其过滤出来的字段位数</p>
+<h2 id="特殊数量符号"><a href="#特殊数量符号" class="headerlink" title="特殊数量符号"></a>特殊数量符号</h2><p>*匹配前一个字符0或者无限次</p>
+<p>+匹配前一个字符1或无限次</p>
+<p>.匹配除换行符\n以外的任意一个字符</p>
+<p>细节：特殊字符符合控制的是紧紧挨着左边的字符或者字符集</p>
+<h2 id="字符组"><a href="#字符组" class="headerlink" title="字符组"></a>字符组</h2><p>把字符用（）括起来，叫字符组，为匹配成功的字符组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">s = <span class="string">&quot;        我是大帅逼\n          &quot;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\s*(\w+)\s*&#x27;</span>,s))</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">[<span class="string">&#x27;我是大帅逼&#x27;</span>]</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">s = <span class="string">&quot;        我是大帅逼,哈哈哈哈\n          &quot;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\s*(\w+)\s*&#x27;</span>,s))</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">[<span class="string">&#x27;我是大帅逼&#x27;</span>, <span class="string">&#x27;哈哈哈哈&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>匹配参数模式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">findall其实有第三个餐宿，他是默认餐宿，参数模式。</span><br></pre></td></tr></table></figure>
+
+<p>re.I 忽略大小写</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">s = <span class="string">&quot;SKDFJESKLeewr&quot;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;le&#x27;</span>,s,re.I))</span><br></pre></td></tr></table></figure>
+
+<p>re.S 匹配空白符</p>
+<h2 id="subprocess"><a href="#subprocess" class="headerlink" title="subprocess"></a>subprocess</h2><p>项目需求：执行命令并将输出劫持实现日志的监控</p>
+<p>用于启动新的进程的模块，它可以用于执行外部命令，获取进程的输出，向进程发送输入和等待进程结束。</p>
+<p>多进程协同：</p>
+<p>python里大概有3个方式</p>
+<ol>
+<li>OS.system函数       缺点：阻塞式</li>
+<li>multiprocessing模块    使用场景：密集型的计算场景</li>
+<li>subprocess模块 函数：run执行指定命令等待命令执行完成后返回一个对象  call执行命令，返回命令执行状态  check_call和前者差不多，但是会输出报错  getoutput执行命令，返回结果</li>
+</ol>
+<p>终端输入命令分为两种，一种是直接在终端输入，另一种是进入环境</p>
+<h2 id="linux-黑名单配置格式"><a href="#linux-黑名单配置格式" class="headerlink" title="linux 黑名单配置格式"></a>linux 黑名单配置格式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">服务：地址：允许/封禁</span><br><span class="line">stmp telnet http ssh all</span><br><span class="line">all：192.168.11.334：deny/allow</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/11/%E5%86%85%E7%BD%91%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%89%8B%E5%8A%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/11/%E5%86%85%E7%BD%91%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%89%8B%E5%8A%A8/" class="post-title-link" itemprop="url">内网信息收集手动</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-11 14:56:12 / 修改时间：14:57:28" itemprop="dateCreated datePublished" datetime="2023-11-11T14:56:12+08:00">2023-11-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>内网信息收集</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/11/python%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄小贤">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="修炼完去打佩恩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/11/python%E5%A4%9A%E8%BF%9B%E7%A8%8B/" class="post-title-link" itemprop="url">python多进程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-11 09:05:18 / 修改时间：14:55:39" itemprop="dateCreated datePublished" datetime="2023-11-11T09:05:18+08:00">2023-11-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="什么是多进程"><a href="#什么是多进程" class="headerlink" title="什么是多进程"></a>什么是多进程</h1><p>通过应用程序利用计算机的多和资源达到同时执行多个任务的目的，以此来提升程序的执行效率</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#单进程时间</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">io_task</span>():</span><br><span class="line">    <span class="comment">#挂起当前进程1s</span></span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    start_time = time.time()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        io_task()</span><br><span class="line">    end_time = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;程序运行耗时 &#123;:.2f&#125;&#x27;</span>.<span class="built_in">format</span>(end_time-start_time))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line">    </span><br><span class="line"> <span class="comment">#程序运行耗时 5.04s</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">在你的情况下，你的 `io_task` 函数执行了一个 I/O 密集型任务（`time.sleep(<span class="number">1</span>)`），这意味着它主要是在等待，而不是在进行 CPU 计算。由于 Python 中的 GIL（全局解释器锁）的存在，多线程并不能在这种情况下提供真正的并行性。</span><br><span class="line"></span><br><span class="line">对于 I/O 密集型任务，使用多线程可能是有效的，但在 Python 中，由于 GIL，你可能并不会得到期望的性能提升。相反，你可以考虑使用多进程来执行这些任务，因为每个进程都有自己的 Python 解释器和 GIL。</span><br><span class="line"></span><br><span class="line">以下是你的代码的修改版本，使用 `multiprocessing` 模块创建多个进程：</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">io_task</span>():</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    start_time = time.time()</span><br><span class="line">    process_list = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        process_list.append(Process(target=io_task))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> pro <span class="keyword">in</span> process_list:</span><br><span class="line">        pro.start()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> pro <span class="keyword">in</span> process_list:</span><br><span class="line">        pro.join()</span><br><span class="line"></span><br><span class="line">    end_time = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;程序运行耗时 &#123;:.2f&#125;&#x27;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br><span class="line">```</span><br><span class="line"></span><br><span class="line">请注意，`Process` 类的 `target` 参数应该是函数对象，而不是函数的调用结果。所以在这里，我用 `target=io_task`，而不是 `target=io_task()`。这确保 `io_task` 函数在新的进程中被调用。</span><br></pre></td></tr></table></figure>
+
+<p>当你运行这段代码时，会发生以下步骤：</p>
+<ol>
+<li><p><strong>导入必要的模块：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process</span><br></pre></td></tr></table></figure>
+<p>这里导入了 <code>time</code> 模块用于计时，以及 <code>Process</code> 类用于创建多个进程。</p>
+</li>
+<li><p><strong>定义 I&#x2F;O 密集型任务函数：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">io_task</span>():</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>这是一个简单的 I&#x2F;O 密集型任务函数，它使用 <code>time.sleep(1)</code> 模拟了一个耗时 1 秒的操作，例如文件读写、网络请求等。</p>
+<ol start="3">
+<li><p><strong>定义主函数：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    start_time = time.time()</span><br><span class="line">    process_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        process_list.append(Process(target=io_task))</span><br></pre></td></tr></table></figure>
+<p>主函数创建了一个空的进程列表 <code>process_list</code>，然后使用 <code>for</code> 循环创建了 5 个进程，每个进程都指向 <code>io_task</code> 函数。</p>
+</li>
+<li><p><strong>启动进程：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> pro <span class="keyword">in</span> process_list:</span><br><span class="line">    pro.start()</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>通过循环启动每个进程，使它们并行执行。</p>
+<ol start="5">
+<li><p><strong>等待进程完成：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> pro <span class="keyword">in</span> process_list:</span><br><span class="line">    pro.join()</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>使用 <code>join</code> 方法等待所有进程完成。<code>join</code> 方法会阻塞主进程，直到被调用的进程执行完成。这确保在打印总体运行时间之前等待所有的子进程。</p>
+<ol start="6">
+<li><p><strong>计算程序运行时间并打印结果：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">end_time = time.time()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;程序运行耗时 &#123;:.2f&#125;&#x27;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br></pre></td></tr></table></figure>
+<p>计算程序的总运行时间（从开始到所有进程完成的时间）并打印结果。</p>
+</li>
+<li><p><strong>运行主程序：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>这确保在多进程环境下正确地运行，因为在 Windows 等系统上，需要确保主程序在 <code>if __name__ == &quot;__main__&quot;:</code> 下执行。</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -522,409 +923,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/python%E4%B9%8B%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄小贤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="修炼完去打佩恩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/11/10/python%E4%B9%8B%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">python之匿名函数</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-11-10 08:53:45 / 修改时间：09:08:34" itemprop="dateCreated datePublished" datetime="2023-11-10T08:53:45+08:00">2023-11-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><p>匿名函数，也称为 lambda 函数，是一种在 Python 中创建小型、一次性的、简单的函数的方式。它们使用 <code>lambda</code> 关键字定义，通常用于需要传递函数作为参数的情况。</p>
-<p>主要作用包括以下几点：</p>
-<ol>
-<li><p><strong>简洁性：</strong> Lambda 函数通常是一行代码，语法简洁，适用于一些简单的操作。使用 lambda 函数可以避免定义正式的函数体。</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add = <span class="keyword">lambda</span> x, y: x + y</span><br><span class="line"><span class="built_in">print</span>(add(<span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># 输出 5</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>传递函数：</strong> Lambda 函数常用于作为参数传递给高阶函数（接受函数作为参数的函数）。</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">squared_numbers = <span class="built_in">map</span>(<span class="keyword">lambda</span> x: x**<span class="number">2</span>, numbers)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(squared_numbers))  <span class="comment"># 输出 [1, 4, 9, 16, 25]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>短期使用：</strong> 当你只需要在某个地方定义一个短期使用的函数，而不希望为其正式定义一个命名函数时，可以使用匿名函数。</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Charlie&#x27;</span>]</span><br><span class="line">sorted_names = <span class="built_in">sorted</span>(names, key=<span class="keyword">lambda</span> x: <span class="built_in">len</span>(x))</span><br><span class="line"><span class="built_in">print</span>(sorted_names)  <span class="comment"># 输出 [&#x27;Bob&#x27;, &#x27;Alice&#x27;, &#x27;Charlie&#x27;]</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>请注意，匿名函数通常用于简单的操作。对于复杂的函数逻辑，更好的做法是使用正式的命名函数，以提高可读性和可维护性。</p>
-<h3 id="参数传递方法"><a href="#参数传递方法" class="headerlink" title="参数传递方法"></a>参数传递方法</h3><p>：前是设置函数参数</p>
-<p>：后是函数体</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄小贤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="修炼完去打佩恩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/11/10/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">高级函数</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-11-10 08:28:13 / 修改时间：09:09:24" itemprop="dateCreated datePublished" datetime="2023-11-10T08:28:13+08:00">2023-11-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="SORTED"><a href="#SORTED" class="headerlink" title="SORTED"></a>SORTED</h1><p>排序</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sorted</span></span><br><span class="line">L = [<span class="string">&#x27;PYTHON&#x27;</span>,<span class="string">&#x27;JAVA&#x27;</span>,<span class="string">&#x27;GO&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;C++&#x27;</span>]</span><br><span class="line">a=<span class="built_in">sorted</span>(L)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>设置key参数来按照什么排序，比如设置abs排序</p>
-<p><code>sorted()</code> 函数是 Python 内置函数之一，用于对可迭代对象（例如列表、元组等）进行排序。<code>sorted()</code> 返回一个新的已排序的列表，而不改变原始对象。</p>
-<p><code>sorted()</code> 函数的基本语法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sorted</span>(iterable, key=<span class="literal">None</span>, reverse=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-<p>其中：</p>
-<ul>
-<li><code>iterable</code> 是要排序的可迭代对象，例如列表或元组。</li>
-<li><code>key</code> 是一个可选参数，用于指定一个函数，该函数将应用于每个元素以生成排序的依据。默认值为 <code>None</code>，表示按照元素本身的值进行排序。</li>
-<li><code>reverse</code> 是一个可选参数，如果设置为 <code>True</code>，则按照降序进行排序；默认为 <code>False</code>，表示按照升序排序。</li>
-</ul>
-<p>下面是一个简单的例子，演示了如何使用 <code>sorted()</code> 对一个列表进行排序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">1</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 sorted() 对列表进行升序排序</span></span><br><span class="line">sorted_numbers = <span class="built_in">sorted</span>(numbers)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;升序排序:&quot;</span>, sorted_numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 sorted() 对列表进行降序排序</span></span><br><span class="line">reverse_sorted_numbers = <span class="built_in">sorted</span>(numbers, reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;降序排序:&quot;</span>, reverse_sorted_numbers)</span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>sorted()</code> 函数被用于对 <code>numbers</code> 列表进行排序。<code>sorted_numbers</code> 包含了升序排序后的列表，而 <code>reverse_sorted_numbers</code> 包含了降序排序后的列表。</p>
-<p>需要注意的是，<code>sorted()</code> 不会改变原始列表，而是返回一个新的已排序的列表。如果你想在原地修改列表，可以使用列表的 <code>sort()</code> 方法，例如 <code>numbers.sort()</code>。</p>
-<h1 id="FILTER"><a href="#FILTER" class="headerlink" title="FILTER"></a>FILTER</h1><p>过滤</p>
-<p><code>filter()</code> 函数是Python内置函数之一，用于过滤可迭代对象（例如列表、元组等）中的元素，返回一个由使得指定函数返回 <code>True</code> 的元素组成的迭代器。</p>
-<p><code>filter()</code> 函数的基本语法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">filter</span>(function, iterable)</span><br></pre></td></tr></table></figure>
-
-<p>其中：</p>
-<ul>
-<li><code>function</code> 是一个用于过滤的函数，该函数返回 <code>True</code> 或 <code>False</code>。</li>
-<li><code>iterable</code> 是要过滤的可迭代对象，例如列表、元组等。</li>
-</ul>
-<p><code>filter()</code> 函数将返回一个迭代器，包含了使得 <code>function</code> 返回 <code>True</code> 的元素。</p>
-<p>下面是一个简单的例子，演示了如何使用 <code>filter()</code> 过滤一个列表中的偶数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个函数，用于过滤偶数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_even</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x % <span class="number">2</span> == <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 要过滤的列表</span></span><br><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 filter() 过滤偶数</span></span><br><span class="line">filtered_numbers = <span class="built_in">filter</span>(is_even, numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将结果转换为列表并打印</span></span><br><span class="line">result = <span class="built_in">list</span>(filtered_numbers)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>is_even</code> 函数用于判断一个数字是否为偶数，然后 <code>filter()</code> 函数使用这个函数过滤了 <code>numbers</code> 列表，返回一个包含偶数的迭代器。最后，通过将迭代器转换为列表，我们得到了过滤后的结果。</p>
-<p>需要注意的是，<code>filter()</code> 返回的是一个迭代器，因此在实际使用中可能需要将其转换为列表或者进行其他操作。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">1</span>,<span class="string">&#x27;hahaha&#x27;</span>,<span class="number">3.14</span>]</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">a</span>(<span class="params"><span class="built_in">object</span></span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(<span class="built_in">object</span>,<span class="built_in">int</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(a(<span class="built_in">list</span>(b)))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">filter</span>(a,b))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">filter</span>(a,b)))</span><br><span class="line"></span><br><span class="line"><span class="comment">#result:</span></span><br><span class="line"><span class="comment">#False</span></span><br><span class="line"><span class="comment">#&lt;filter object at 0x000001F585F40F40&gt;</span></span><br><span class="line"><span class="comment">#[1]</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="MAP函数"><a href="#MAP函数" class="headerlink" title="MAP函数"></a>MAP函数</h1><p><code>map()</code> 函数是 Python 内置函数之一，用于将一个函数应用于一个或多个可迭代对象（例如列表、元组等）的对应元素，返回一个包含结果的迭代器。其基本语法如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">map</span>(function, iterable, ...)</span><br></pre></td></tr></table></figure>
-
-<p>其中：</p>
-<ul>
-<li><code>function</code> 是要应用的函数。</li>
-<li><code>iterable</code> 是一个或多个可迭代对象，表示要将函数应用于的输入数据。</li>
-</ul>
-<p><code>map()</code> 函数会对每个可迭代对象中的元素调用指定的函数，并返回一个包含结果的迭代器。如果有多个可迭代对象，函数将并行应用于它们的对应元素。</p>
-<p>下面是一个简单的例子，演示了如何使用 <code>map()</code> 函数将一个列表中的每个元素平方：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个函数，用于计算平方</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">square</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 要处理的列表</span></span><br><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 map() 应用函数到列表的每个元素</span></span><br><span class="line">squared_numbers = <span class="built_in">map</span>(square, numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将结果转换为列表并打印</span></span><br><span class="line">result = <span class="built_in">list</span>(squared_numbers)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>square</code> 函数用于计算一个数字的平方，然后 <code>map()</code> 函数将这个函数应用于 <code>numbers</code> 列表的每个元素，返回一个包含平方结果的迭代器。最后，通过将迭代器转换为列表，我们得到了处理后的结果。</p>
-<p>需要注意的是，<code>map()</code> 返回一个迭代器，因此在实际使用中可能需要将其转换为列表或者进行其他操作。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">b = [-<span class="number">1</span>,-<span class="number">2</span>,<span class="number">3</span>,-<span class="number">4</span>,<span class="number">5</span>,-<span class="number">6</span>,<span class="number">7</span>,-<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">a</span>(<span class="params">i</span>):</span><br><span class="line">    <span class="keyword">return</span> i**<span class="number">2</span></span><br><span class="line"><span class="built_in">map</span>(a,b)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">map</span>(a,b)))</span><br><span class="line"><span class="comment">#[1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>我记得有时候将两个值付给两个变量也可以用map</strong></p>
-<p>您是正确的！在 Python 中，<code>map()</code> 函数可以用于同时处理多个可迭代对象，并将它们的元素逐一传递给一个函数。当函数接受多个参数时，<code>map()</code> 将每个可迭代对象的元素分别传递给函数的对应参数。</p>
-<p>下面是一个简单的例子，演示了如何使用 <code>map()</code> 将两个列表对应位置的元素相加：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 两个列表</span></span><br><span class="line">numbers1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">numbers2 = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，将两个数相加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x, y</span>):</span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 map() 将函数应用于两个列表的对应元素</span></span><br><span class="line">sum_result = <span class="built_in">map</span>(add, numbers1, numbers2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将结果转换为列表并打印</span></span><br><span class="line">result = <span class="built_in">list</span>(sum_result)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>add</code> 函数接受两个参数，并返回它们的和。<code>map()</code> 函数将 <code>add</code> 应用于 <code>numbers1</code> 和 <code>numbers2</code> 列表的对应位置的元素，返回一个包含相加结果的迭代器。最后，通过将迭代器转换为列表，我们得到了处理后的结果。</p>
-<p>这种用法使得 <code>map()</code> 在同时处理多个可迭代对象时非常方便。请注意，被传递给函数的参数数量必须与传递给 <code>map()</code> 函数的可迭代对象数量相匹配。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/10/python%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄小贤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="修炼完去打佩恩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/11/10/python%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7%E4%B9%8B%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-11-10 08:16:49" itemprop="dateCreated datePublished" datetime="2023-11-10T08:16:49+08:00">2023-11-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<h2 id="title-python高级特性之高阶函数"><a href="#title-python高级特性之高阶函数" class="headerlink" title="title:python高级特性之高阶函数"></a>title:python高级特性之高阶函数</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/09/leetcode%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄小贤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="修炼完去打佩恩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/11/09/leetcode%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="post-title-link" itemprop="url">leetcode 简单题之两数之和 python解法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-11-09 17:29:25" itemprop="dateCreated datePublished" datetime="2023-11-09T17:29:25+08:00">2023-11-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-10 09:08:57" itemprop="dateModified" datetime="2023-11-10T09:08:57+08:00">2023-11-10</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a><em><strong>题目</strong></em></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</span><br><span class="line"></span><br><span class="line">你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</span><br><span class="line"></span><br><span class="line">你可以按任意顺序返回答案。</span><br></pre></td></tr></table></figure>
-
-<h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a><em><strong>思路分析</strong></em></h3><p>这道题没有难度，主要考验的是对循环的使用，内嵌套一个双循环，定一个外层内层循环，再遍历内循环，去一一对比两数之和等于目标值的序号，结果返回序号就行。</p>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><em><strong>题解</strong></em></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>,n):</span><br><span class="line">                <span class="keyword">if</span> nums[i]+ nums[j] ==target:</span><br><span class="line">                    <span class="keyword">return</span> [i,j]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/09/python%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A3%85%E9%A5%B0%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄小贤">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="修炼完去打佩恩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/11/09/python%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%A3%85%E9%A5%B0%E5%99%A8/" class="post-title-link" itemprop="url">装饰器 + 迭代器+生成器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-11-09 11:02:28" itemprop="dateCreated datePublished" datetime="2023-11-09T11:02:28+08:00">2023-11-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-10 09:09:06" itemprop="dateModified" datetime="2023-11-10T09:09:06+08:00">2023-11-10</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="装饰器的功能"><a href="#装饰器的功能" class="headerlink" title="装饰器的功能"></a>装饰器的功能</h1><p>可以添加模块以外的各种小功能</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#！/usr/bin/env python3 #指定解释器</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decorator</span>(<span class="params">*args,**kwargs</span>):</span><br><span class="line">   		<span class="built_in">print</span>(<span class="string">&#x27;function&#x27;</span> + func.__name__ + <span class="string">&#x27; has been called at &#x27;</span>+ datetime.now().strftime (<span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>))</span><br><span class="line">    <span class="keyword">return</span> func(*args,**kwargs)</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x,y</span>)</span><br><span class="line">	<span class="keyword">return</span> x+y</span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test</span>()</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;___________test__________&#x27;</span>)</span><br><span class="line">test()</span><br><span class="line">add(<span class="number">7</span>,<span class="number">8</span>)</span><br></pre></td></tr></table></figure>
-
-<p>装饰器就是把不改变原函数功能情况下再次添加一些功能</p>
-<h1 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h1><p>什么是迭代器，什么是可迭代对象，一个一个读取操作对象就是迭代，可迭代对象就是for循环可以读的元素就是迭代。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">比如 数组，元组，字典，列表，</span><br></pre></td></tr></table></figure>
-
-<p>迭代器可以用next获取下一个值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">letter= [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>]</span><br><span class="line"><span class="comment">#for l in letter:</span></span><br><span class="line"><span class="comment">#    print(l)</span></span><br><span class="line">it= <span class="built_in">iter</span>(letter)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">next</span>(it))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">next</span>(it))</span><br><span class="line">结果为</span><br><span class="line">a</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
-
-<p>原理代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,a,b</span>):</span><br><span class="line">        self.a = a</span><br><span class="line">        self.b = b</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__iter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__next__</span>(<span class="params">self</span>):</span><br><span class="line">        self.a +=<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> self.a &gt; self.b:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration()</span><br><span class="line">        <span class="keyword">return</span> self.a</span><br><span class="line">test = Test(<span class="number">0</span>,<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br><span class="line"><span class="built_in">print</span>(test.__next__())</span><br></pre></td></tr></table></figure>
-
-<h1 id="生成器interation"><a href="#生成器interation" class="headerlink" title="生成器interation"></a>生成器interation</h1><p>生成器首先得是一个迭代器，生成器是动态的，随时可以生成的，如果迭代对象很多，使用生成器可以节省很多内存。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g = (x**x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> g:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<p>用yield编写生成器和ruturn 返回对象</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#斐波拉契数列生成</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fib</span>(<span class="params">n</span>):</span><br><span class="line">    current =<span class="number">0</span></span><br><span class="line">    a,b = <span class="number">1</span>,<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> current &lt; n:</span><br><span class="line">        <span class="keyword">yield</span>  a</span><br><span class="line">        a,b = b, a+b</span><br><span class="line">        current +=<span class="number">1</span></span><br><span class="line">f10=fib(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> f10:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -996,7 +994,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

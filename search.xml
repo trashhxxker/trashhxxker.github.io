@@ -288,4 +288,134 @@
 
 ]]></content>
   </entry>
+  <entry>
+    <title>antibrutebroke</title>
+    <url>/2023/11/25/antibrutebroke/</url>
+    <content><![CDATA[<h1 id="如何实现暴力破解项目"><a href="#如何实现暴力破解项目" class="headerlink" title="如何实现暴力破解项目"></a>如何实现暴力破解项目</h1><p>1.打开安全日志</p>
+<p>2.对日志进行实时监控</p>
+<p>3.解析每一行的内容，找出正在爆破的ip</p>
+<p>4.设置一个阈值，查过一个阈值之后直接封禁。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>linux日志分析复习</title>
+    <url>/2023/11/17/linux%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/var/log/cron #记录系统定时任务</span><br><span class="line">/var/log/cups #打印信息的日志</span><br><span class="line">/var/log/message #记录的重要信息的日志</span><br><span class="line">/var/log/btmp #登录失败日志</span><br><span class="line">/var/log/lastlog #最后一次登录</span><br><span class="line">/var/log/wtmp #成功登录记录</span><br><span class="line">/var/log/secure #登录日志</span><br><span class="line">/var/log/utmp #目前登录用户的信息</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hosts黑名单	/etc/hosts.deny</span><br><span class="line">hosts白名单	/etc/hosts.allow</span><br></pre></td></tr></table></figure>
+
+<p>分析技巧</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find</span><br><span class="line">grep          -A -B -C 是什么意思前五行后五行</span><br><span class="line">awk</span><br><span class="line">sed</span><br><span class="line">cat</span><br><span class="line"></span><br><span class="line">tail -f 默认输出内容后十行 在f前加数字就可以更改数量行数</span><br><span class="line">tail -n +5 </span><br><span class="line">head</span><br><span class="line">从第十行开始显示五行</span><br><span class="line">tail -n +10 |head -n 5</span><br><span class="line">find / -name 搜索内容</span><br><span class="line">awk -F ：&#x27;&#123;print $1&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>python多进程</title>
+    <url>/2023/11/11/python%E5%A4%9A%E8%BF%9B%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="什么是多进程"><a href="#什么是多进程" class="headerlink" title="什么是多进程"></a>什么是多进程</h1><p>通过应用程序利用计算机的多和资源达到同时执行多个任务的目的，以此来提升程序的执行效率</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#单进程时间</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">io_task</span>():</span><br><span class="line">    <span class="comment">#挂起当前进程1s</span></span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    start_time = time.time()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        io_task()</span><br><span class="line">    end_time = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;程序运行耗时 &#123;:.2f&#125;&#x27;</span>.<span class="built_in">format</span>(end_time-start_time))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line">    </span><br><span class="line"> <span class="comment">#程序运行耗时 5.04s</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">在你的情况下，你的 `io_task` 函数执行了一个 I/O 密集型任务（`time.sleep(<span class="number">1</span>)`），这意味着它主要是在等待，而不是在进行 CPU 计算。由于 Python 中的 GIL（全局解释器锁）的存在，多线程并不能在这种情况下提供真正的并行性。</span><br><span class="line"></span><br><span class="line">对于 I/O 密集型任务，使用多线程可能是有效的，但在 Python 中，由于 GIL，你可能并不会得到期望的性能提升。相反，你可以考虑使用多进程来执行这些任务，因为每个进程都有自己的 Python 解释器和 GIL。</span><br><span class="line"></span><br><span class="line">以下是你的代码的修改版本，使用 `multiprocessing` 模块创建多个进程：</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">io_task</span>():</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    start_time = time.time()</span><br><span class="line">    process_list = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        process_list.append(Process(target=io_task))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> pro <span class="keyword">in</span> process_list:</span><br><span class="line">        pro.start()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> pro <span class="keyword">in</span> process_list:</span><br><span class="line">        pro.join()</span><br><span class="line"></span><br><span class="line">    end_time = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;程序运行耗时 &#123;:.2f&#125;&#x27;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br><span class="line">```</span><br><span class="line"></span><br><span class="line">请注意，`Process` 类的 `target` 参数应该是函数对象，而不是函数的调用结果。所以在这里，我用 `target=io_task`，而不是 `target=io_task()`。这确保 `io_task` 函数在新的进程中被调用。</span><br></pre></td></tr></table></figure>
+
+<p>当你运行这段代码时，会发生以下步骤：</p>
+<ol>
+<li><p><strong>导入必要的模块：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process</span><br></pre></td></tr></table></figure>
+<p>这里导入了 <code>time</code> 模块用于计时，以及 <code>Process</code> 类用于创建多个进程。</p>
+</li>
+<li><p><strong>定义 I&#x2F;O 密集型任务函数：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">io_task</span>():</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>这是一个简单的 I&#x2F;O 密集型任务函数，它使用 <code>time.sleep(1)</code> 模拟了一个耗时 1 秒的操作，例如文件读写、网络请求等。</p>
+<ol start="3">
+<li><p><strong>定义主函数：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    start_time = time.time()</span><br><span class="line">    process_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        process_list.append(Process(target=io_task))</span><br></pre></td></tr></table></figure>
+<p>主函数创建了一个空的进程列表 <code>process_list</code>，然后使用 <code>for</code> 循环创建了 5 个进程，每个进程都指向 <code>io_task</code> 函数。</p>
+</li>
+<li><p><strong>启动进程：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> pro <span class="keyword">in</span> process_list:</span><br><span class="line">    pro.start()</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>通过循环启动每个进程，使它们并行执行。</p>
+<ol start="5">
+<li><p><strong>等待进程完成：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> pro <span class="keyword">in</span> process_list:</span><br><span class="line">    pro.join()</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>使用 <code>join</code> 方法等待所有进程完成。<code>join</code> 方法会阻塞主进程，直到被调用的进程执行完成。这确保在打印总体运行时间之前等待所有的子进程。</p>
+<ol start="6">
+<li><p><strong>计算程序运行时间并打印结果：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">end_time = time.time()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;程序运行耗时 &#123;:.2f&#125;&#x27;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br></pre></td></tr></table></figure>
+<p>计算程序的总运行时间（从开始到所有进程完成的时间）并打印结果。</p>
+</li>
+<li><p><strong>运行主程序：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>这确保在多进程环境下正确地运行，因为在 Windows 等系统上，需要确保主程序在 <code>if __name__ == &quot;__main__&quot;:</code> 下执行。</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>内网信息收集手动</title>
+    <url>/2023/11/11/%E5%86%85%E7%BD%91%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%89%8B%E5%8A%A8/</url>
+    <content><![CDATA[<p>内网信息收集</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>python项目1：暴力破解</title>
+    <url>/2023/11/16/python%E9%A1%B9%E7%9B%AE1%EF%BC%9A%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</url>
+    <content><![CDATA[<h1 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h1><p>只要是暴露在公网云服务器，每天都有大量的暴力破解行为。</p>
+<p>解决办法：</p>
+<p>1.更换端口（无济于事）</p>
+<p>2.买云防护，waf（贵）</p>
+<p>暴力破解的一个自动阻断</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">涉及到的模块</span><br><span class="line">re（正则表达式模块）</span><br><span class="line">subprocess模块</span><br></pre></td></tr></table></figure>
+
+<h2 id="re模块"><a href="#re模块" class="headerlink" title="re模块"></a>re模块</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">从对象的字符串里面匹配</span><br><span class="line"><span class="comment">#匹配普通字符</span></span><br><span class="line"><span class="comment">#findall函数:找到匹配到的所有子串，并返回一个列表，如果没有匹配到的话，就返回空</span></span><br><span class="line"><span class="keyword">import</span>  re</span><br><span class="line">s = <span class="string">&#x27;hello 奥特曼hellohello 520&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;hello&#x27;</span>,s))</span><br><span class="line"><span class="comment">#search函数：功能是扫描整个字符串，并且返回第一个</span></span><br><span class="line">m=re.search(<span class="string">&#x27;奥特曼&#x27;</span>,s)</span><br><span class="line"><span class="built_in">print</span>(m.group(),m.span())</span><br><span class="line"><span class="comment">#answer</span></span><br><span class="line"><span class="comment">#[&#x27;hello&#x27;, &#x27;hello&#x27;, &#x27;hello&#x27;]</span></span><br><span class="line"><span class="comment">#奥特曼 (6, 9)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="匹配元字符"><a href="#匹配元字符" class="headerlink" title="匹配元字符"></a>匹配元字符</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">\d  <span class="comment">#匹配所有数字0-9</span></span><br><span class="line">\D	<span class="comment">#匹配非数字</span></span><br><span class="line">\w	<span class="comment">#匹配所有单词字符，包括大小写 数字 下划线 中文</span></span><br><span class="line">\W	<span class="comment">#匹配剩下的，空格 特殊字符</span></span><br></pre></td></tr></table></figure>
+
+<p>​	</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">s = <span class="string">&#x27;SJDFSDJF42342#$@!\nGPT 黄智贤&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\w&#x27;</span>,s))</span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\d&#x27;</span>,s))</span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\W&#x27;</span>,s))</span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\D&#x27;</span>,s))</span><br><span class="line"><span class="comment">#结果</span></span><br><span class="line">[<span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;G&#x27;</span>, <span class="string">&#x27;P&#x27;</span>, <span class="string">&#x27;T&#x27;</span>, <span class="string">&#x27;黄&#x27;</span>, <span class="string">&#x27;智&#x27;</span>, <span class="string">&#x27;贤&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;#&#x27;</span>, <span class="string">&#x27;$&#x27;</span>, <span class="string">&#x27;@&#x27;</span>, <span class="string">&#x27;!&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27; &#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;#&#x27;</span>, <span class="string">&#x27;$&#x27;</span>, <span class="string">&#x27;@&#x27;</span>, <span class="string">&#x27;!&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;G&#x27;</span>, <span class="string">&#x27;P&#x27;</span>, <span class="string">&#x27;T&#x27;</span>, <span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;黄&#x27;</span>, <span class="string">&#x27;智&#x27;</span>, <span class="string">&#x27;贤&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集 []"></a>字符集 []</h2><p>字符的集合，用[]表示，字符集内用 “ ^” 表示 “非”</p>
+<p>\d &#x3D; [0-9]</p>
+<p>\D &#x3D; [  ^0-9 ]</p>
+<h2 id="匹配空白字符-s"><a href="#匹配空白字符-s" class="headerlink" title="匹配空白字符 \s"></a>匹配空白字符 \s</h2><p>‘ ’   </p>
+<p>\n 空行符</p>
+<p>\t 制表符</p>
+<p>\r 回车符</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s1 = <span class="string">&#x27;      \npython 我是打沙包\r&#x27;</span></span><br><span class="line">要过滤空白符</span><br><span class="line">可以这样</span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;[^\s]&#x27;</span>,s1))</span><br></pre></td></tr></table></figure>
+
+<h2 id="匹配标定的"><a href="#匹配标定的" class="headerlink" title="匹配标定的 {}"></a>匹配标定的 {}</h2><p>类似与长度，可以标定其过滤出来的字段位数</p>
+<h2 id="特殊数量符号"><a href="#特殊数量符号" class="headerlink" title="特殊数量符号"></a>特殊数量符号</h2><p>*匹配前一个字符0或者无限次</p>
+<p>+匹配前一个字符1或无限次</p>
+<p>.匹配除换行符\n以外的任意一个字符</p>
+<p>细节：特殊字符符合控制的是紧紧挨着左边的字符或者字符集</p>
+<h2 id="字符组"><a href="#字符组" class="headerlink" title="字符组"></a>字符组</h2><p>把字符用（）括起来，叫字符组，为匹配成功的字符组</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">s = <span class="string">&quot;        我是大帅逼\n          &quot;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\s*(\w+)\s*&#x27;</span>,s))</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">[<span class="string">&#x27;我是大帅逼&#x27;</span>]</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">s = <span class="string">&quot;        我是大帅逼,哈哈哈哈\n          &quot;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;\s*(\w+)\s*&#x27;</span>,s))</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">[<span class="string">&#x27;我是大帅逼&#x27;</span>, <span class="string">&#x27;哈哈哈哈&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>匹配参数模式</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">findall其实有第三个餐宿，他是默认餐宿，参数模式。</span><br></pre></td></tr></table></figure>
+
+<p>re.I 忽略大小写</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">s = <span class="string">&quot;SKDFJESKLeewr&quot;</span></span><br><span class="line"><span class="built_in">print</span>(re.findall(<span class="string">&#x27;le&#x27;</span>,s,re.I))</span><br></pre></td></tr></table></figure>
+
+<p>re.S 匹配空白符</p>
+<h2 id="subprocess"><a href="#subprocess" class="headerlink" title="subprocess"></a>subprocess</h2><p>项目需求：执行命令并将输出劫持实现日志的监控</p>
+<p>用于启动新的进程的模块，它可以用于执行外部命令，获取进程的输出，向进程发送输入和等待进程结束。</p>
+<p>多进程协同：</p>
+<p>python里大概有3个方式</p>
+<ol>
+<li>OS.system函数       缺点：阻塞式</li>
+<li>multiprocessing模块    使用场景：密集型的计算场景</li>
+<li>subprocess模块 函数：run执行指定命令等待命令执行完成后返回一个对象  call执行命令，返回命令执行状态  check_call和前者差不多，但是会输出报错  getoutput执行命令，返回结果</li>
+</ol>
+<p>终端输入命令分为两种，一种是直接在终端输入，另一种是进入环境</p>
+<h2 id="linux-黑名单配置格式"><a href="#linux-黑名单配置格式" class="headerlink" title="linux 黑名单配置格式"></a>linux 黑名单配置格式</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">服务：地址：允许/封禁</span><br><span class="line">stmp telnet http ssh all</span><br><span class="line">all：192.168.11.334：deny/allow</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
 </search>
